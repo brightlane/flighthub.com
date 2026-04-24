@@ -1,0 +1,62 @@
+import random
+import time
+
+# =========================
+# 🔗 AFFILIATE LINK
+# =========================
+AFFILIATE_URL = "https://track.rqqft.com/aff_c?offer_id=25630&aff_id=21885"
+
+# =========================
+# 🧠 POST DATABASE
+# =========================
+POSTS = {
+    "facebook": [
+        f"✈️ Stop overpaying for flights!\n\nCompare airlines instantly and find cheaper deals.\n\n👉 {AFFILIATE_URL}",
+        f"Cheap flights are real — you just need the right tool ✈️\n\nSave money on your next trip:\n{AFFILIATE_URL}"
+    ],
+
+    "instagram": [
+        f"✈️ Cheap flights exist — stop overpaying 🌍\n\nCompare airlines instantly.\n\n👉 {AFFILIATE_URL}\n\n#travel #cheapflights #flighthacks",
+        f"Save money on flights instantly ✈️\n\nSmart travelers compare before booking.\n\n{AFFILIATE_URL}"
+    ],
+
+    "twitter": [
+        f"Flights change daily — stop overpaying ✈️\n\nCompare airlines & save money:\n{AFFILIATE_URL}",
+        f"You don’t need to guess flight prices anymore.\nCompare → Book → Save 💰\n\n{AFFILIATE_URL}"
+    ],
+
+    "tiktok": [
+        f"Hook: Stop booking flights like this...\n\nMost people overpay because they only check one site.\n\nCompare airlines instantly.\n\nLink:\n{AFFILIATE_URL}",
+        f"Travel hack: Always compare flights before booking ✈️\n\nSave money instantly.\n\n{AFFILIATE_URL}"
+    ]
+}
+
+# =========================
+# 🔁 POST GENERATOR
+# =========================
+def generate_post(platform):
+    return random.choice(POSTS[platform])
+
+# =========================
+# 📤 SIMULATED POSTING
+# =========================
+def post_all():
+    print("\n🚀 SOCIAL MEDIA AUTO POSTING SYSTEM STARTED\n")
+
+    for platform in POSTS.keys():
+        post = generate_post(platform)
+
+        print(f"\n================ {platform.upper()} ================")
+        print(post)
+        print("========================================\n")
+
+        # simulate delay
+        time.sleep(1)
+
+    print("\n✅ DONE - COPY POSTS INTO YOUR SOCIAL ACCOUNTS\n")
+
+# =========================
+# ▶ RUN SYSTEM
+# =========================
+if __name__ == "__main__":
+    post_all()
