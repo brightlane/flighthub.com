@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# 🧭 Sitemap location (important for Google indexing)
+Sitemap: https://brightlane.github.io/flighthub.com/sitemap.xml
+
+# 🚫 Block sensitive or useless pages (optional but recommended)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /*.json$
+Disallow: /*?*
+
+# 🧠 Crawl hints
+Crawl-delay: 1
+
+# 🤖 Specific bots (optional optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
